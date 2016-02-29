@@ -1,7 +1,8 @@
 # JSKeys
-Helps interpret javascript keydown and keypress events
+Helps interpret javascript keydown and keypress events.
+JSKeys adds several functions to the KeybordEvent class as well as the jQuery.Event class, if it exists.
 
-JSKeys_keyEventToPrintable(event)
+event.printable()
 
     Returns the printable character that the combination of keys
     should yield. Particularly useful for the "keydown" event, which
@@ -10,20 +11,20 @@ JSKeys_keyEventToPrintable(event)
     This function cannot take into account
     the state of the capslock key.
 
-JSKeys_keyEventToDescription(event)
+v.description()
 
     Returns a textual description of the combination of keys pressed.
     For example, it may return "ctrl-shift-f6".
 
-JSKeys_keyToCode
+event.keyToCode
 
-    A objects that lets you find key codes by textual description
-    For exapmle JSKeys_keyToCode.left is 37
+    An object that lets you find key codes by textual description
+    For exapmle event.keyToCode.left is 37
 
-JSKeys_codeToKeyInfo
+event.codeToKeyInfo
 
     An array of keycodes that contain information about the key.
     For example:
-      JSKeys_codeToKeyInfo[188].description = "comma"
-      JSKeys_codeToKeyInfo[188].print = ","
-      JSKeys_codeToKeyInfo[188].shiftPrint = "<"
+      event.codeToKeyInfo[188].description = "comma"
+      event.codeToKeyInfo[188].print = ","
+      event.codeToKeyInfo[188].shiftPrint = "<"
