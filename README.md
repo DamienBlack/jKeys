@@ -19,7 +19,7 @@ event.description()
 event.keyToCode
 
     An object that lets you find key codes by textual description
-    For exapmle event.keyToCode.left is 37
+    For example event.keyToCode.left is 37
 
 event.codeToKeyInfo
 
