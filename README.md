@@ -11,7 +11,7 @@ event.printable()
     This function cannot take into account
     the state of the capslock key.
 
-v.description()
+event.description()
 
     Returns a textual description of the combination of keys pressed.
     For example, it may return "ctrl-shift-f6".
