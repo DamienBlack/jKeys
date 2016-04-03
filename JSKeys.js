@@ -1,5 +1,4 @@
 KeyboardEvent.prototype.printable = function() {
-    console.log(this);
     if (this.ctrlKey || this.altKey) {
         return "";
     } else if (this.shiftKey) {
