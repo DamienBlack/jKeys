@@ -1,4 +1,4 @@
-# JSKeys
+# jKeys
 Helps interpret javascript keydown and keypress events.
 JSKeys adds several functions to the KeybordEvent class as well as the jQuery.Event class, if it exists.
 
