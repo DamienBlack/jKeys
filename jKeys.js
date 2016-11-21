@@ -14,6 +14,32 @@ if (typeof jQuery !== 'undefined') {
     }
 }
 
+$(function() {
+    $.shiftDown = false;
+    $.ctrlDown = false;
+    $.altDown = false;
+});
+
+$(window).on('keydown', function(event) {
+    if (event.key == "Shift") {
+        $.shiftDown = true;
+    } else if (event.key == 'Control') {
+        $.ctrlDown = true;
+    } else if (event.key == 'Alt') {
+        $.altDown = true;
+    }
+});
+
+$(window).on('keyup', function(event) {
+    if (event.key == "Shift") {
+        $.shiftDown = false;
+    } else if (event.key == 'Control') {
+        $.ctrlDown = false;
+    } else if (event.key == 'Alt') {
+        $.altDown = false;
+    }
+});
+
 KeyboardEvent.prototype.description = function() {
     text = "";
     if (this.ctrlKey) {
